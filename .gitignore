@@ -1,0 +1,60 @@
+# =========================
+# ROS 2 / colcon workspace
+# =========================
+build/
+install/
+log/
+log_latest/
+*.log
+
+# colcon marker
+COLCON_IGNORE
+
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# virtual environments
+.venv/
+venv/
+env/
+
+# egg / dist artifacts
+*.egg-info/
+dist/
+build/
+
+# =========================
+# IDEs / editors
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# =========================
+# Testing / cache
+# =========================
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# =========================
+# OS-specific
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# ROS tooling extras
+# =========================
+ament_cmake_python/
+ament_index/
