@@ -4,9 +4,9 @@ from rclpy.qos import QoSProfile, ReliabilityPolicy
 from std_msgs.msg import String
 
 
-class MyNode(Node):
+class PiCamera(Node):
     def __init__(self):
-        super().__init__('my_node')
+        super().__init__('pi_camera')
 
         qos = QoSProfile(
             depth=10,
@@ -23,7 +23,7 @@ class MyNode(Node):
 
     def timer_callback(self):
         msg = String()
-        msg.data = f'Hello World: {self.i}'
+        msg.data = f'Hello World from camera: {self.i}'
 
         self.publisher_.publish(msg)
 
@@ -35,14 +35,14 @@ class MyNode(Node):
 def main(args=None):
     rclpy.init(args=args)
 
-    my_node = MyNode()
+    pi_camera = PiCamera()
 
     try:
-        rclpy.spin(my_node)
+        rclpy.spin(pi_camera)
     except KeyboardInterrupt:
         pass
     finally:
-        my_node.destroy_node()
+        pi_camera_module.destroy_node()
         rclpy.shutdown()
 
 

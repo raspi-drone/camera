@@ -2,7 +2,7 @@ import os
 from glob import glob
 from setuptools import find_packages, setup
 
-package_name = 'my_package'
+package_name = 'camera'
 
 setup(
     name=package_name,
@@ -27,7 +27,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'my_node = my_package.my_node:main'
+            'pi_camera = camera.pi_camera:main'
         ],
     },
 )
